@@ -16,6 +16,10 @@ import labelEs from './i18n/es.json';
 import labelEn from './i18n/en.json';
 import labelFr from './i18n/fr.json';
 import labelDe from './i18n/de.json';
+import { BasicFiltersComponent } from './components/basic-filters/basic-filters.component';
+import { TabsComponent } from './components/tabs/tabs.component';
+import { EditImageComponent } from './components/edit-image/edit-image.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'ngp-image-picker',
@@ -23,6 +27,8 @@ import labelDe from './i18n/de.json';
   styleUrls: ['./ngp-image-picker.component.scss'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [BasicFiltersComponent, TabsComponent, EditImageComponent, CommonModule ],
 })
 export class NgpImagePickerComponent implements OnInit {
   config: ImagePickerConf = {

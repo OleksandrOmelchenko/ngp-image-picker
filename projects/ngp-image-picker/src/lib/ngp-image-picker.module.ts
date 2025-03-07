@@ -7,9 +7,9 @@ import { EditImageComponent } from './components/edit-image/edit-image.component
 import { BasicFiltersComponent } from './components/basic-filters/basic-filters.component';
 import { CropperWrapperComponent } from './components/cropper-wrapper/cropper-wrapper.component';
 @NgModule({
-  declarations: [NgpImagePickerComponent, TabsComponent, EditImageComponent, BasicFiltersComponent, CropperWrapperComponent],
+  declarations: [],
   imports: [CommonModule, FormsModule, ReactiveFormsModule],
-  exports: [NgpImagePickerComponent],
+  exports: [],
   providers: [],
 })
 export class NgpImagePickerModule {}

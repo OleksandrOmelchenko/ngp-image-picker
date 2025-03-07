@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
-
+import { CommonModule } from '@angular/common';
 interface TabHeader {
   active: boolean;
   label: string;
@@ -8,6 +8,8 @@ interface TabHeader {
   selector: 'lib-tabs',
   templateUrl: './tabs.component.html',
   styleUrls: ['./tabs.component.scss'],
+  standalone: true,
+  imports: [CommonModule],
 })
 export class TabsComponent implements OnInit {
   labels: Array<TabHeader> = [];

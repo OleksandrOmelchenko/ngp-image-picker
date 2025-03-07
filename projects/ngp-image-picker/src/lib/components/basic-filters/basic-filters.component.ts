@@ -1,10 +1,13 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { IBasicFilterState } from '../../models/index.models';
-
+import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @Component({
   selector: 'lib-basic-filters',
   templateUrl: './basic-filters.component.html',
   styleUrls: ['./basic-filters.component.scss'],
+  standalone: true,
+  imports: [CommonModule, FormsModule, ReactiveFormsModule],
 })
 export class BasicFiltersComponent implements OnInit {
   @Input() color: string = '';

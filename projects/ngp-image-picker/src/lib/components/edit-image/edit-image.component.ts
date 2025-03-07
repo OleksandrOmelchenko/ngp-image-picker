@@ -1,12 +1,18 @@
 import { Component, Input, OnInit, Output, EventEmitter, ChangeDetectorRef, AfterViewInit } from '@angular/core';
 import { convertImageUsingCanvas, dragElement, MAX_BUFFER_UNDO_MEMORY, saveState } from '../../functions/image-processing';
 import { IBasicFilterState, IState } from '../../models/index.models';
-
+import { CropperWrapperComponent } from '../cropper-wrapper/cropper-wrapper.component';
+import { TabsComponent } from '../tabs/tabs.component';
+import { BasicFiltersComponent } from '../basic-filters/basic-filters.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // const Croppr = require('../../services/croppr-service')
 @Component({
   selector: 'lib-edit-image',
   templateUrl: './edit-image.component.html',
   styleUrls: ['./edit-image.component.scss'],
+  standalone: true,
+  imports: [CropperWrapperComponent, TabsComponent, BasicFiltersComponent, CommonModule, FormsModule, ReactiveFormsModule],
 })
 export class EditImageComponent implements OnInit {
   @Input() labels: any;
@@ -63,7 +69,7 @@ export class EditImageComponent implements OnInit {
     if (this.imageSrc && this.imageSrc.length) {
       return Math.ceil(((3 / 4) * this.imageSrc.length) / 1024);
     } else {
-      return "";
+      return 0;
     }
   }
 
