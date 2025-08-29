@@ -16,6 +16,9 @@ import labelEs from './i18n/es.json';
 import labelEn from './i18n/en.json';
 import labelFr from './i18n/fr.json';
 import labelDe from './i18n/de.json';
+import labelUa from './i18n/ua.json';
+import labelRu from './i18n/ru.json';
+
 import { BasicFiltersComponent } from './components/basic-filters/basic-filters.component';
 import { TabsComponent } from './components/tabs/tabs.component';
 import { EditImageComponent } from './components/edit-image/edit-image.component';
@@ -28,7 +31,7 @@ import { CommonModule } from '@angular/common';
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
-  imports: [BasicFiltersComponent, TabsComponent, EditImageComponent, CommonModule ],
+  imports: [BasicFiltersComponent, TabsComponent, EditImageComponent, CommonModule],
 })
 export class NgpImagePickerComponent implements OnInit {
   config: ImagePickerConf = {
@@ -112,7 +115,7 @@ export class NgpImagePickerComponent implements OnInit {
   @Output() $imageChanged: EventEmitter<any> = new EventEmitter<any>();
   @Output() $imageOriginal: EventEmitter<any> = new EventEmitter<any>();
 
-  constructor(private chRef: ChangeDetectorRef) {}
+  constructor(private chRef: ChangeDetectorRef) { }
 
   ngOnInit(): void {
     this.appendLinkIconsToHead();
@@ -203,7 +206,10 @@ export class NgpImagePickerComponent implements OnInit {
   parseToBase64(imageUrl: string) {
     let types = imageUrl.split('.');
     let type = types[types.length - 1];
-    if (type && (type == 'png' || type == 'jpeg' || type == 'webp')) {
+    if (this.config.format) {
+      type = this.config.format;
+    }
+    else if (type && (type == 'png' || type == 'jpeg' || type == 'webp')) {
       type = type;
     } else {
       type = 'jpeg';
@@ -266,6 +272,12 @@ export class NgpImagePickerComponent implements OnInit {
         }
         if (value.language == 'de') {
           this.labels = { ...labelDe };
+        }
+        if (value.language == 'ua') {
+          this.labels = { ...labelUa };
+        }
+        if (value.language == 'ru') {
+          this.labels = { ...labelRu };
         }
       }
     }

@@ -54,8 +54,13 @@
             "polyfills": "projects/test-app/src/polyfills.ts",
             "tsConfig": "projects/test-app/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": ["projects/test-app/src/favicon.ico", "projects/test-app/src/assets"],
-            "styles": ["projects/test-app/src/styles.scss"],
+            "assets": [
+              "projects/test-app/src/favicon.ico",
+              "projects/test-app/src/assets"
+            ],
+            "styles": [
+              "projects/test-app/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -95,10 +100,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "test-app:build:production"
+              "buildTarget": "test-app:build:production"
             },
             "development": {
-              "browserTarget": "test-app:build:development"
+              "buildTarget": "test-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -106,7 +111,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "test-app:build"
+            "buildTarget": "test-app:build"
           }
         },
         "test": {
@@ -117,8 +122,13 @@
             "tsConfig": "projects/test-app/tsconfig.spec.json",
             "karmaConfig": "projects/test-app/karma.conf.js",
             "inlineStyleLanguage": "scss",
-            "assets": ["projects/test-app/src/favicon.ico", "projects/test-app/src/assets"],
-            "styles": ["projects/test-app/src/styles.scss"],
+            "assets": [
+              "projects/test-app/src/favicon.ico",
+              "projects/test-app/src/assets"
+            ],
+            "styles": [
+              "projects/test-app/src/styles.scss"
+            ],
             "scripts": []
           }
         }
