@@ -1,6 +1,6 @@
 {
-  "name": "ngp-image-picker",
-  "version": "2.4.4",
+  "name": "@tashiuzavoziu/ngp-image-picker",
+  "version": "1.0.2",
   "description": "Angular library for the selection, edition and compression of images in png, jpeg and webp formats.",
   "peerDependencies": {
     "@angular/common": "^15.0.4",
@@ -23,12 +23,18 @@
     "cropping images"
   ],
   "author": {
-    "name": "Jose Alejandro Concepcion Alvarez",
-    "url": "https://www.linkedin.com/in/jalejandroc/"
+    "name": "Oleksandr Omelchenko",
+    "url": "https://github.com/OleksandrOmelchenko"
   },
-  "repository": "https://github.com/josealejandro2928/ngp-image-picker",
+  "contributors": [
+    {
+      "name": "Jose Alejandro Concepcion Alvarez",
+      "url": "https://www.linkedin.com/in/jalejandroc/"
+    }
+  ],
+  "repository": "https://github.com/OleksandrOmelchenko/ngp-image-picker",
   "bugs": {
-    "url": "https://github.com/josealejandro2928/ngp-image-picker/issues"
+    "url": "https://github.com/OleksandrOmelchenko/ngp-image-picker/issues"
   },
-  "homepage": "https://github.com/josealejandro2928/ngp-image-picker#readme"
+  "homepage": "https://github.com/OleksandrOmelchenko/ngp-image-picker#readme"
 }

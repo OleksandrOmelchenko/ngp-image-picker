@@ -1,17 +1,18 @@
 {
-  "name": "ngp-image-picker",
-  "version": "2.4.4",
+  "name": "@tashiuzavoziu/ngp-image-picker",
+  "version": "1.0.2",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "build-library": "ng build ngp-image-picker --configuration production",
     "test-library": "ng build ngp-image-picker --configuration production --watch",
+    "package": "npx ng-packagr -p ./projects/ngp-image-picker/ng-package.json -c ./projects/ngp-image-picker/tsconfig.lib.json",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "^19.0.0",
     "@angular/compiler": "^19.0.0",
