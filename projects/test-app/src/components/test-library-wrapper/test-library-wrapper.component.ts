@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { ImagePickerConf, NgpImagePickerComponent, NgpImagePickerModule } from 'ngp-image-picker';
+import { ImagePickerConf, NgpImagePickerModule } from 'ngp-image-picker';
 
 @Component({
   selector: 'app-test-library-wrapper',
   templateUrl: './test-library-wrapper.component.html',
   styleUrls: ['./test-library-wrapper.component.scss'],
-  imports: [NgpImagePickerModule, NgpImagePickerComponent, FormsModule, CommonModule],
+  imports: [NgpImagePickerModule, FormsModule],
+  standalone: true,
 })
 export class TestLibraryWrapperComponent implements OnInit {
   config2: ImagePickerConf = {
@@ -20,7 +20,6 @@ export class TestLibraryWrapperComponent implements OnInit {
     format: 'webp',
   };
   initialImage: string = "https://localhost:7213/images/hare.jpg";
-  // initialImage: string = "https://local-spaces.fra1.digitaloceanspaces.com/test.jpg";
   imageSrc: any = '';
   constructor() { }
 

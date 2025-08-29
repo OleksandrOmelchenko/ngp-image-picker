@@ -22,7 +22,7 @@ import labelRu from './i18n/ru.json';
 import { BasicFiltersComponent } from './components/basic-filters/basic-filters.component';
 import { TabsComponent } from './components/tabs/tabs.component';
 import { EditImageComponent } from './components/edit-image/edit-image.component';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgIf, NgStyle } from '@angular/common';
 
 @Component({
   selector: 'ngp-image-picker',
@@ -31,7 +31,7 @@ import { CommonModule } from '@angular/common';
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
-  imports: [BasicFiltersComponent, TabsComponent, EditImageComponent, CommonModule],
+  imports: [BasicFiltersComponent, TabsComponent, EditImageComponent, NgStyle, CommonModule, NgIf],
 })
 export class NgpImagePickerComponent implements OnInit {
   config: ImagePickerConf = {
